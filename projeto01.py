@@ -91,7 +91,15 @@ while True:
             break
     else:
         print('Resposta incorreta. por favor responda "Sim" ou "Não".')  
-# agora verificamos se o úsuario é "Suspeito", "Cúmplice", "Assassino" ou "Inocente".   
+# agora verificamos se o úsuario é "Suspeito", "Cúmplice", "Assassino" ou "Inocente"
+if respostaSim == 5:
+    print("\nVocê foi classificado como 'Assassino'.")
+elif respostaSim == 3 or respostaSim == 4:
+    print("\nVocê foi classificado como 'Cúmplice'.")
+elif respostaSim == 2:
+    print("\nVocê foi classificado como 'Suspeito'.")         
+else:
+    print("\nVocê foi classificado como 'Inocente'.")         
 
     
 
