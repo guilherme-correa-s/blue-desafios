@@ -25,7 +25,7 @@ pergunta5 = 'Você já trabalhou com a vítima?'
 print('Por favor responda com "Sim" ou "Não" as próximas 5 perguntas.')
 # fazer a primeira pergunta.
 while True:
-    resposta = input(f'{pergunta1}\nSim ou Não: ').upper()
+    resposta = input(f'\n{pergunta1}\nSim ou Não: ').upper()
     # verificamos se a resposta é sim ou não.
     if resposta=='SIM' or resposta=='NÃO' or resposta=='NAO':
         # se a resposta for sim alimentamos a var respostaSim
@@ -39,9 +39,59 @@ while True:
     # se a resposta não for 'sim' ou 'não', pedimos para o úsuario responder novamente
     else:
         print('Resposta incorreta. por favor responda "Sim" ou "Não".')
-
-
-
+# fazer a segunda pergunta / repetir o processo da primeira pergunta
+while True:
+    resposta = input(f'\n{pergunta2}\nSim ou Não: ').upper()
+    # verificamos se a resposta é sim ou não.
+    if resposta=='SIM' or resposta=='NÃO' or resposta=='NAO':
+        # se a resposta for sim alimentamos a var respostaSim
+        if resposta=='SIM':
+            respostaSim+=1
+            break
+        # se a resposta for não alimentamos a var respostaNao    
+        else:
+            respostaNao+=1
+            break
+    # se a resposta não for 'sim' ou 'não', pedimos para o úsuario responder novamente
+    else:
+        print('Resposta incorreta. por favor responda "Sim" ou "Não".')
+# fazer a terceira pergunta / repetir o processo da primeira pergunta
+while True:
+    resposta = input(f'\n{pergunta3}\nSim ou Não: ').upper()
+    if resposta=='SIM' or resposta=='NÃO' or resposta=='NAO':
+        if resposta=='SIM':
+            respostaSim+=1
+            break   
+        else:
+            respostaNao+=1
+            break
+    else:
+        print('Resposta incorreta. por favor responda "Sim" ou "Não".')        
+# fazer a quarta pergunta / repetir o processo da primeira pergunta
+while True:
+    resposta = input(f'\n{pergunta4}\nSim ou Não: ').upper()
+    if resposta=='SIM' or resposta=='NÃO' or resposta=='NAO':
+        if resposta=='SIM':
+            respostaSim+=1
+            break   
+        else:
+            respostaNao+=1
+            break
+    else:
+        print('Resposta incorreta. por favor responda "Sim" ou "Não".') 
+# fazer a quinta pergunta / repetir o processo da primeira pergunta
+while True:
+    resposta = input(f'\n{pergunta5}\nSim ou Não: ').upper()
+    if resposta=='SIM' or resposta=='NÃO' or resposta=='NAO':
+        if resposta=='SIM':
+            respostaSim+=1
+            break   
+        else:
+            respostaNao+=1
+            break
+    else:
+        print('Resposta incorreta. por favor responda "Sim" ou "Não".')  
+# agora verificamos se o úsuario é "Suspeito", "Cúmplice", "Assassino" ou "Inocente".   
 
     
 
