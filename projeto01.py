@@ -5,7 +5,7 @@
 # • " Você mora perto da vítima?"
 # • " Você devia para a vítima?"
 # • " Você já trabalhou com a vítima?"
-
+#----------------------------------------------------------------------------------
 # Se a pessoa responder positivamente a:
 # • 2 questões ela deve ser classificada como "Suspeita",
 # • Entre 3 e 4 como "Cúmplice"
@@ -14,7 +14,7 @@
 
 # váriaveis para armazenar quantas respostas foram positivas ou negativas.
 respostaSim = 0
-respostaNao = 0
+respostaNao = 0 # váriavel não esta sendo útilizada atualmente. 
 # váriaveis para armazenas as perguntas. (As perguntas poderiam estar direto no print)
 pergunta1 = 'Você telefonou para a vítima?'
 pergunta2 = 'Você esteve no local do crime?'
@@ -22,7 +22,8 @@ pergunta3 = 'Você mora perto da vítima?'
 pergunta4 = 'Você devia para a vítima?'
 pergunta5 = 'Você já trabalhou com a vítima?'
 # explicar para o úsuario o que ele irá faze.
-print('Por favor responda com "Sim" ou "Não" as próximas 5 perguntas.')
+print('\nPor favor responda com "Sim" ou "Não" as próximas 5 perguntas.')
+print('De acordo com a suas respostas vamos classificar sua participação no crime.')
 # fazer a primeira pergunta.
 while True:
     resposta = input(f'\n{pergunta1}\nSim ou Não: ').upper()
@@ -92,15 +93,14 @@ while True:
     else:
         print('Resposta incorreta. por favor responda "Sim" ou "Não".')  
 # agora verificamos se o úsuario é "Suspeito", "Cúmplice", "Assassino" ou "Inocente"
-if respostaSim == 5:
+if respostaSim == 5: # 5 respostas positivas, Assassino.
     print("\nVocê foi classificado como 'Assassino'.")
-elif respostaSim == 3 or respostaSim == 4:
+elif respostaSim == 3 or respostaSim == 4: # 3 a 4 respostas positivas, Cúmplice
     print("\nVocê foi classificado como 'Cúmplice'.")
-elif respostaSim == 2:
+elif respostaSim == 2: # 2 respostas positivas, Suspeito
     print("\nVocê foi classificado como 'Suspeito'.")         
-else:
+else: # 1 ou 0 resposta positivas, Inocente
     print("\nVocê foi classificado como 'Inocente'.")         
 
-    
-
-
+# Observações ->
+# o programa pode ser reduzido drasticamente com o uso de listas. Porém cmomo não vimos ainda, optei por não utilizar. 
